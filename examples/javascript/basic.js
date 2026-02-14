@@ -9,23 +9,15 @@ const API_KEY = process.env.APIVERVE_API_KEY || 'YOUR_API_KEY_HERE';
 const API_URL = 'https://api.apiverve.com/v1/urlencode';
 
 /**
- * Make a POST request to the URL Encoder/Decoder API
+ * Make a GET request to the URL Encoder/Decoder API
  */
 async function callURLEncoder/DecoderAPI() {
   try {
-    // Request body
-    const requestBody &#x3D; {
-    &quot;text&quot;: &quot;Hello World &amp; Goodbye&quot;,
-    &quot;action&quot;: &quot;encode&quot;
-};
-
     const response = await fetch(API_URL, {
-      method: 'POST',
+      method: 'GET',
       headers: {
-        'x-api-key': API_KEY,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(requestBody)
+        'x-api-key': API_KEY
+      }
     });
 
     // Check if response is successful
