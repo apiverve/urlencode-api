@@ -7,17 +7,16 @@ declare module '@apiverve/urlencode' {
   export interface urlencodeResponse {
     status: string;
     error: string | null;
-    data: URLEncoder/DecoderData;
+    data: URLEncoderDecoderData;
     code?: number;
   }
 
 
   interface URLEncoderDecoderData {
-      action:         string;
-      original:       string;
-      result:         string;
-      originalLength: number;
-      resultLength:   number;
+      action:   string;
+      original: string;
+      encoded:  string;
+      length:   number;
   }
 
   export default class urlencodeWrapper {
