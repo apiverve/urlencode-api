@@ -111,9 +111,8 @@ import com.fasterxml.jackson.annotation.*;
 public class URLEncoderDecoderData {
     private String action;
     private String original;
-    private String result;
-    private long originalLength;
-    private long resultLength;
+    private String encoded;
+    private long length;
 
     @JsonProperty("action")
     public String getAction() { return action; }
@@ -125,18 +124,13 @@ public class URLEncoderDecoderData {
     @JsonProperty("original")
     public void setOriginal(String value) { this.original = value; }
 
-    @JsonProperty("result")
-    public String getResult() { return result; }
-    @JsonProperty("result")
-    public void setResult(String value) { this.result = value; }
+    @JsonProperty("encoded")
+    public String getEncoded() { return encoded; }
+    @JsonProperty("encoded")
+    public void setEncoded(String value) { this.encoded = value; }
 
-    @JsonProperty("original_length")
-    public long getOriginalLength() { return originalLength; }
-    @JsonProperty("original_length")
-    public void setOriginalLength(long value) { this.originalLength = value; }
-
-    @JsonProperty("result_length")
-    public long getResultLength() { return resultLength; }
-    @JsonProperty("result_length")
-    public void setResultLength(long value) { this.resultLength = value; }
+    @JsonProperty("length")
+    public long getLength() { return length; }
+    @JsonProperty("length")
+    public void setLength(long value) { this.length = value; }
 }
