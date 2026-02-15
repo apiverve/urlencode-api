@@ -1,4 +1,4 @@
-APIVerve.API.URLEncoder/Decoder API
+URLEncoderDecoder API
 ============
 
 URL Encoder/Decoder is a tool for encoding and decoding URL strings. It converts special characters to percent-encoded format and decodes them back for safe URL transmission.
@@ -7,7 +7,7 @@ URL Encoder/Decoder is a tool for encoding and decoding URL strings. It converts
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a .NET Wrapper for the [APIVerve.API.URLEncoder/Decoder API](https://apiverve.com/marketplace/urlencode)
+This is a .NET Wrapper for the [URLEncoderDecoder API](https://apiverve.com/marketplace/urlencode?utm_source=nuget&utm_medium=readme)
 
 ---
 
@@ -15,17 +15,17 @@ This is a .NET Wrapper for the [APIVerve.API.URLEncoder/Decoder API](https://api
 
 Using the .NET CLI:
 ```
-dotnet add package APIVerve.API.URLEncoder/Decoder
+dotnet add package APIVerve.API.URLEncoderDecoder
 ```
 
 Using the Package Manager:
 ```
-nuget install APIVerve.API.URLEncoder/Decoder
+nuget install APIVerve.API.URLEncoderDecoder
 ```
 
 Using the Package Manager Console:
 ```
-Install-Package APIVerve.API.URLEncoder/Decoder
+Install-Package APIVerve.API.URLEncoderDecoder
 ```
 
 From within Visual Studio:
@@ -33,15 +33,15 @@ From within Visual Studio:
 1. Open the Solution Explorer
 2. Right-click on a project within your solution
 3. Click on Manage NuGet Packages
-4. Click on the Browse tab and search for "APIVerve.API.URLEncoder/Decoder"
-5. Click on the APIVerve.API.URLEncoder/Decoder package, select the appropriate version in the right-tab and click Install
+4. Click on the Browse tab and search for "APIVerve.API.URLEncoderDecoder"
+5. Click on the APIVerve.API.URLEncoderDecoder package, select the appropriate version in the right-tab and click Install
 
 ---
 
 ## Configuration
 
 Before using the urlencode API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com)
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=readme)
 
 ---
 
@@ -58,9 +58,9 @@ class Program
     static async Task Main(string[] args)
     {
         // Initialize the API client
-        var apiClient = new URLEncoder/DecoderAPIClient("[YOUR_API_KEY]");
+        var apiClient = new URLEncoderDecoderAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new URLEncoder/DecoderQueryOptions {
+        var queryOptions = new QueryOptions {
   text = "Hello World & Goodbye",
   action = "encode"
 };
@@ -93,17 +93,17 @@ class Program
 
 ## Usage
 
-The APIVerve.API.URLEncoder/Decoder API documentation is found here: [https://docs.apiverve.com/ref/urlencode](https://docs.apiverve.com/ref/urlencode).
+The URLEncoderDecoder API documentation is found here: [https://docs.apiverve.com/ref/urlencode](https://docs.apiverve.com/ref/urlencode?utm_source=nuget&utm_medium=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
 ###### Authentication
-APIVerve.API.URLEncoder/Decoder API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
+URLEncoderDecoder API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
 
 ```csharp
 // Create an instance of the API client
-var apiClient = new URLEncoder/DecoderAPIClient("[YOUR_API_KEY]");
+var apiClient = new URLEncoderDecoderAPIClient("[YOUR_API_KEY]");
 ```
 
 ---
@@ -123,9 +123,9 @@ public class Example
 {
     public static async Task Main(string[] args)
     {
-        var apiClient = new URLEncoder/DecoderAPIClient("[YOUR_API_KEY]");
+        var apiClient = new URLEncoderDecoderAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new URLEncoder/DecoderQueryOptions {
+        var queryOptions = new QueryOptions {
   text = "Hello World & Goodbye",
   action = "encode"
 };
@@ -156,9 +156,9 @@ public class Example
 {
     public static void Main(string[] args)
     {
-        var apiClient = new URLEncoder/DecoderAPIClient("[YOUR_API_KEY]");
+        var apiClient = new URLEncoderDecoderAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new URLEncoder/DecoderQueryOptions {
+        var queryOptions = new QueryOptions {
   text = "Hello World & Goodbye",
   action = "encode"
 };
@@ -194,9 +194,9 @@ public class Example
 {
     public static async Task Main(string[] args)
     {
-        var apiClient = new URLEncoder/DecoderAPIClient("[YOUR_API_KEY]");
+        var apiClient = new URLEncoderDecoderAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new URLEncoder/DecoderQueryOptions {
+        var queryOptions = new QueryOptions {
   text = "Hello World & Goodbye",
   action = "encode"
 };
@@ -247,13 +247,13 @@ public class Example
 {
     public static async Task Main(string[] args)
     {
-        var apiClient = new URLEncoder/DecoderAPIClient("[YOUR_API_KEY]");
+        var apiClient = new URLEncoderDecoderAPIClient("[YOUR_API_KEY]");
 
         // Configure retry behavior (max 3 retries)
         apiClient.SetMaxRetries(3);        // Retry up to 3 times (default: 0, max: 3)
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
-        var queryOptions = new URLEncoder/DecoderQueryOptions {
+        var queryOptions = new QueryOptions {
   text = "Hello World & Goodbye",
   action = "encode"
 };
@@ -289,13 +289,13 @@ public class Example
 Add custom headers to your requests:
 
 ```csharp
-var apiClient = new URLEncoder/DecoderAPIClient("[YOUR_API_KEY]");
+var apiClient = new URLEncoderDecoderAPIClient("[YOUR_API_KEY]");
 
 // Add custom headers
 apiClient.AddCustomHeader("X-Custom-Header", "custom-value");
 apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 
-var queryOptions = new URLEncoder/DecoderQueryOptions {
+var queryOptions = new QueryOptions {
   text = "Hello World & Goodbye",
   action = "encode"
 };
@@ -314,7 +314,7 @@ apiClient.ClearCustomHeaders();
 Enable logging for debugging:
 
 ```csharp
-var apiClient = new URLEncoder/DecoderAPIClient("[YOUR_API_KEY]", isDebug: true);
+var apiClient = new URLEncoderDecoderAPIClient("[YOUR_API_KEY]", isDebug: true);
 
 // Or use a custom logger
 apiClient.SetLogger(message =>
@@ -322,7 +322,7 @@ apiClient.SetLogger(message =>
     Console.WriteLine($"[LOG] {DateTime.Now:yyyy-MM-dd HH:mm:ss} - {message}");
 });
 
-var queryOptions = new URLEncoder/DecoderQueryOptions {
+var queryOptions = new QueryOptions {
   text = "Hello World & Goodbye",
   action = "encode"
 };
@@ -335,13 +335,13 @@ var response = await apiClient.ExecuteAsync(queryOptions);
 Customize retry behavior for failed requests:
 
 ```csharp
-var apiClient = new URLEncoder/DecoderAPIClient("[YOUR_API_KEY]");
+var apiClient = new URLEncoderDecoderAPIClient("[YOUR_API_KEY]");
 
 // Set retry options
 apiClient.SetMaxRetries(3);           // Retry up to 3 times (default: 0, max: 3)
 apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (default: 1000ms)
 
-var queryOptions = new URLEncoder/DecoderQueryOptions {
+var queryOptions = new QueryOptions {
   text = "Hello World & Goodbye",
   action = "encode"
 };
@@ -354,9 +354,9 @@ var response = await apiClient.ExecuteAsync(queryOptions);
 The API client implements `IDisposable` for proper resource cleanup:
 
 ```csharp
-using (var apiClient = new URLEncoder/DecoderAPIClient("[YOUR_API_KEY]"))
+using (var apiClient = new URLEncoderDecoderAPIClient("[YOUR_API_KEY]"))
 {
-    var queryOptions = new URLEncoder/DecoderQueryOptions {
+    var queryOptions = new QueryOptions {
   text = "Hello World & Goodbye",
   action = "encode"
 };
@@ -376,10 +376,9 @@ using (var apiClient = new URLEncoder/DecoderAPIClient("[YOUR_API_KEY]"))
   "error": null,
   "data": {
     "action": "encode",
-    "original": "Hello World!",
-    "result": "Hello%20World%21",
-    "original_length": 12,
-    "result_length": 17
+    "original": "Hello World & Goodbye",
+    "encoded": "Hello%20World%20%26%20Goodbye",
+    "length": 29
   }
 }
 ```
@@ -388,7 +387,7 @@ using (var apiClient = new URLEncoder/DecoderAPIClient("[YOUR_API_KEY]"))
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=readme).
 
 ---
 
@@ -399,14 +398,14 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=readme) and all legal documents and agreements.
 
 ---
 
 ## License
 Licensed under the The MIT License (MIT)
 
-Copyright (&copy;) 2025 APIVerve, and EvlarSoft LLC
+Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
