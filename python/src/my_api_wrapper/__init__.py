@@ -1,1 +1,3 @@
-from .apiClient import UrlencodeAPIClient
+from .apiClient import UrlencodeAPIClient, UrlencodeAPIClientError
+
+__all__ = ['UrlencodeAPIClient', 'UrlencodeAPIClientError']
