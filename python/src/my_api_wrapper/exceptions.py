@@ -1,3 +1,3 @@
-class UrlencodeURLEncoder/DecoderAPIError(Exception):
+class UrlencodeURLEncoderDecoderAPIError(Exception):
     """A custom exception for API errors"""
     pass
