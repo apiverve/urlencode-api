@@ -6,7 +6,7 @@
 //
 //    var responseObj = ResponseObj.FromJson(jsonString);
 
-namespace APIVerve.API.URLEncoder/Decoder
+namespace APIVerve.API.URLEncoderDecoder
 {
     using System;
     using System.Collections.Generic;
@@ -35,13 +35,10 @@ namespace APIVerve.API.URLEncoder/Decoder
         [JsonProperty("original")]
         public string Original { get; set; }
 
-        [JsonProperty("result")]
-        public string Result { get; set; }
+        [JsonProperty("encoded")]
+        public string Encoded { get; set; }
 
-        [JsonProperty("original_length")]
-        public long OriginalLength { get; set; }
-
-        [JsonProperty("result_length")]
-        public long ResultLength { get; set; }
+        [JsonProperty("length")]
+        public long Length { get; set; }
     }
 }
