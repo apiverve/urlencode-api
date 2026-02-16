@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:urlencode-api:1.1.13'
+    implementation 'com.github.apiverve:urlencode-api:1.1.14'
 }
 ```
 
@@ -47,7 +47,7 @@ URLEncoderDecoderAPIClient client = new URLEncoderDecoderAPIClient("YOUR_API_KEY
 try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("text", "Hello World!");
+    parameters.put("text", "Hello World & Goodbye");
     parameters.put("action", "encode");
 
     // Execute the request
