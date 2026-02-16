@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/urlencode",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "URL Encoder/Decoder is a tool for encoding and decoding URL strings. It converts special characters to percent-encoded format and decodes them back for safe URL transmission.",
   "main": "index.js",
   "types": "index.d.ts",
