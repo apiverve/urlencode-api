@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/urlencode",
-  "version": "1.2.0",
-  "description": "URL Encoder/Decoder is a tool for encoding and decoding URL strings. It converts special characters to percent-encoded format and decodes them back for safe URL transmission.",
+  "version": "1.2.2",
+  "description": "URL Encoder/Decoder converts text into percent-encoded strings or decodes existing URL components back into plain text. Pass any string with an encode or decode action to receive the processed output and your original text.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/urlencode-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/urlencode?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/urlencode?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
