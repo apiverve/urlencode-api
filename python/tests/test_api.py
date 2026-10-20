@@ -1,5 +1,5 @@
 import unittest
-from apiverve_urlencoder/decoder.apiClient import UrlencodeAPIClient
+from apiverve_urlencoderdecoder.apiClient import UrlencodeAPIClient
 from unittest.mock import patch
 
 class TestUrlencodeAPIClient(unittest.TestCase):
@@ -8,7 +8,7 @@ class TestUrlencodeAPIClient(unittest.TestCase):
         self.api_key = 'test_api_key'
         self.client = UrlencodeAPIClient(self.api_key)
 
-    @patch('apiverve_urlencoder/decoder.apiClient.requests.get')
+    @patch('apiverve_urlencoderdecoder.apiClient.requests.get')
     def test_make_request_success(self, mock_get):
         # Assuming there's an endpoint 'test_endpoint' for testing purposes
         mock_get.return_value.status_code = 200
@@ -16,7 +16,7 @@ class TestUrlencodeAPIClient(unittest.TestCase):
         response = self.client.get('test_endpoint')
         self.assertIsInstance(response, dict)
 
-    @patch('apiverve_urlencoder/decoder.apiClient.requests.get')
+    @patch('apiverve_urlencoderdecoder.apiClient.requests.get')
     def test_make_request_failure(self, mock_get):
         # Assuming there's an endpoint 'test_endpoint' for testing purposes
         mock_get.return_value.status_code = 404
