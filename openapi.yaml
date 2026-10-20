@@ -2,9 +2,9 @@ openapi: 3.0.4
 info:
   title: URL Encoder/Decoder
   description: >-
-    URL Encoder/Decoder is a tool for encoding and decoding URL strings. It
-    converts special characters to percent-encoded format and decodes them back
-    for safe URL transmission.
+    URL Encoder/Decoder converts text into percent-encoded strings or decodes
+    existing URL components back into plain text. Pass any string with an encode
+    or decode action to receive the processed output and your original text.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +19,7 @@ servers:
 paths:
   /v1/urlencode:
     post:
-      summary: URL Encode
+      summary: URL Encoder/Decoder
       description: Encode text to URL-safe format (percent-encoding)
       operationId: urlencode
       parameters: []
