@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/urlencode",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "URL Encoder/Decoder converts text into percent-encoded strings or decodes existing URL components back into plain text. Pass any string with an encode or decode action to receive the processed output and your original text.",
   "main": "index.js",
   "types": "index.d.ts",
