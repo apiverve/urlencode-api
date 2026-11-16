@@ -67,7 +67,7 @@ namespace APIVerve.API.URLEncoderDecoder
         /// <summary>Validation rules for parameters</summary>
         private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>
         {
-            { "text", new ValidationRule { Type = "string", Required = true } },
+            { "text", new ValidationRule { Type = "string", Required = true, MinLength = 1 } },
             { "action", new ValidationRule { Type = "string", Required = false } }
         };
 

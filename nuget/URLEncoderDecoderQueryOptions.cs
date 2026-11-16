@@ -11,7 +11,7 @@ namespace APIVerve.API.URLEncoderDecoder
     public class URLEncoderDecoderQueryOptions
     {
         /// <summary>
-        /// The text to encode
+        /// The text to encode; leading and trailing whitespace is encoded too
         /// </summary>
         [JsonProperty("text")]
         public string Text { get; set; }
