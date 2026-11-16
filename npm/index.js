@@ -30,7 +30,7 @@ class urlencodeWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/urlencode';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"text":{"type":"string","required":true},"action":{"type":"string","required":false,"default":"encode"}};
+        this.validationRules = {"text":{"type":"string","required":true,"minLength":1},"action":{"type":"string","required":false,"default":"encode"}};
     }
 
     /**
